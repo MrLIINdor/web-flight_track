@@ -1,0 +1,15 @@
+{
+  "common": {
+    "profile": "Профиль",
+    "singIn": "Отправиться в путешествие",
+    "sinOut": "Покинуть путешествие",
+    "login": "Логин",
+    "password": "Пароль",
+
+    "developers": "MrLIINdor by UrCatIsWatchinU - All Rights Reserved ©"
+  },
+
+  "home": {
+    "titleHistory": "История путешествий"
+  }
+}
