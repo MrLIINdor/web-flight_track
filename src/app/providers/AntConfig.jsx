@@ -1,5 +1,5 @@
 import React from 'react';
-import { ConfigProvider, theme } from 'antd';
+import { ConfigProvider } from 'antd';
 import ruRU from 'antd/lib/locale/ru_RU';
 
 export default function AntConfig({ children }) {
