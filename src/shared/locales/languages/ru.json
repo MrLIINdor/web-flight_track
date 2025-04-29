@@ -5,8 +5,11 @@
     "sinOut": "Покинуть путешествие",
     "login": "Логин",
     "password": "Пароль",
+    "create": "Добавить",
+    "modalCreateTitle": "Добавить путешествие",
+    "modalEditTitle": "Изменить путешествие",
 
-    "developers": "MrLIINdor by UrCatIsWatchinU - All Rights Reserved ©"
+    "developers": "MrLIINdor & UrCatIsWatchinU - All Rights Reserved ©"
   },
 
   "home": {

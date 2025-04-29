@@ -7,12 +7,20 @@ export default function AntConfig({ children }) {
     <ConfigProvider
       locale={ruRU}
       theme={{
-        components: {},
         token: {
           colorPrimary: '#a31d1d',
           colorPrimaryHover: '#d84040',
           fontFamily: 'Comfortaa',
           borderRadius: '8px',
+        },
+        components: {
+          Button: {
+            defaultHoverBg: '#eae7dc',
+            defaultBg: '#eae7dc',
+          },
+          // Dropdown: {
+          //   colorBgElevated: '#eae7dc',
+          // },
         },
       }}
     >

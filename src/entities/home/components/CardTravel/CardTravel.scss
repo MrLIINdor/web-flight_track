@@ -1,0 +1,42 @@
+.box-travel {
+  width: 14em;
+  height: 10em;
+  border-radius: 15px;
+  padding: 1em;
+  background-color: var(--color-accent);
+  color: var(--color-bouns);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.box-travel-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.box-travel-title-btn {
+  display: flex;
+  gap: 1em;
+}
+
+.box-travel-info {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.box-travel-info-dates {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin: 1em 0;
+  gap: 0.2em 1em;
+}
+
+.box-travel-times {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}

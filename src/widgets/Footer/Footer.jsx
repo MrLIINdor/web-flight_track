@@ -1,10 +1,13 @@
 import React from 'react';
 import './Footer.scss';
+import { useTranslation } from 'react-i18next';
 
 export default function Footer() {
+  const { t } = useTranslation(['common', 'home']);
+
   return (
     <div className="box-footer">
-      MrLIINdor by UrCatIsWatchinU - All Rights Reserved © {new Date().getFullYear()}
+      {t('common:developers')} {new Date().getFullYear()}
     </div>
   );
 }

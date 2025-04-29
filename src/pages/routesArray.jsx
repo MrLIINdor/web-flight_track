@@ -17,7 +17,7 @@ export const routesArray = [
   {
     path: LOGIN,
     element: <AuthPage />,
-    isAuth: true,
+    isAuthPage: true,
   },
   {
     path: PLATFORM,

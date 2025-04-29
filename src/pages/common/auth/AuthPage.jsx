@@ -5,7 +5,7 @@ import { Button, Form, Input } from 'antd';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router';
 import { EyeInvisibleOutlined, EyeOutlined, LockOutlined, UserOutlined } from '@ant-design/icons';
-// import { setAuthorizationData } from '../../../shared/utils/authUtils';
+import { setAuthorizationData } from '../../../shared/utils/authUtils';
 import { PLATFORM } from '../../../app/providers/RouterConfig';
 import { useTranslation } from 'react-i18next';
 import './AuthPage.scss';
@@ -29,7 +29,7 @@ export default function AuthPage() {
     // const response = await dispatch(getSingInAction());
 
     // if (response?.meta?.requestStatus == 'fulfilled') {
-    // setAuthorizationData(response);
+    setAuthorizationData('auth');
     navigate(PLATFORM);
     // }
 
