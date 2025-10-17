@@ -2,7 +2,7 @@ import React from 'react';
 import AuthPage from '../../pages/common/auth/AuthPage';
 import HomePage from '../../pages/platform/home/HomePage';
 import Error403 from '../../pages/common/error/Error403';
-import { createBrowserRouter, Navigate } from 'react-router';
+import { createBrowserRouter, Navigate, useLocation } from 'react-router';
 import { getAuthorizationData } from '../../shared/utils/authUtils';
 import MainLayout from '../../widgets/MainLayout/MainLayout';
 
@@ -22,13 +22,23 @@ export const LOGIN = '/login';
  */
 export const ERROR_403 = '/err/403';
 
-const Root = () => <MainLayout />;
+const Root = () => {
+  const auth = !!getAuthorizationData();
+  const location = useLocation();
+  const isAuthPage = location.pathname === LOGIN;
+
+  if (!auth && !isAuthPage) {
+    return <Navigate to={LOGIN} />;
+  }
+
+  return <MainLayout isAuthPage={isAuthPage} />;
+};
 
 const routers = [
+  { path: '*', element: <Error403 /> },
+  { path: ERROR_403, element: <Error403 /> },
   { path: LOGIN, element: <AuthPage /> },
   { path: PLATFORM, element: <HomePage /> },
-  { path: ERROR_403, element: <Error403 /> },
-  { path: '*', element: <Error403 /> },
 ];
 
 export const router = createBrowserRouter([
